@@ -10,6 +10,9 @@ on:
       upload-coverage:
         required: true
         type: boolean
+    secrets:
+      codacy-token:
+        required: false
 
 jobs:
   test:
@@ -43,7 +46,7 @@ jobs:
     - name: ☑️ Run tests
       run: invoke test
 
-    - name: ️ Generate coverage
+    - name: Generate coverage
       if: ${{ inputs.upload-coverage }}
       run: invoke coverage
 
@@ -53,5 +56,5 @@ jobs:
       with:
         # TODO Set a token for your repository (https://docs.codacy.com/codacy-api/api-tokens/#repository-api-tokens)
         # TODO Store the token as the CODACY_PROJECT_TOKEN secret in the repository configuration
-        project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        project-token: ${{ secrets.codacy-token }}
         coverage-reports: coverage.xml
