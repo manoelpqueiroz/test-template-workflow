@@ -21,4 +21,5 @@ jobs:
     with:
       python-version: "3.9"
       upload-coverage: true
+    secrets:
       codacy-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
