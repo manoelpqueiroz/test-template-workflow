@@ -25,7 +25,7 @@ def something(duration=0.000001):
         ("Raven", "Hello Raven!"),
         ("Maxine", "Hello Maxine!"),
         ("Matteo", "Hello Matteo!"),
-        ("Destinee", "Hello Destine!"),  # UPDATEME with the correct `expected` value
+        ("Destinee", "Hello Destinee!"),  # UPDATEME with the correct `expected` value
         ("Alden", "Hello Alden!"),
         ("Mariah", "Hello Mariah!"),
         ("Anika", "Hello Anika!"),
