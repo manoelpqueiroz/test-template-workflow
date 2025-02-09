@@ -1,0 +1,23 @@
+
+# Check GitHub Actions documentation at:
+# https://github.com/marketplace/actions/pypi-publish
+# UPDATEME to suit your project's workflow
+name: 🧪 Test
+
+on: push
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        test-python-version: ["3.10", "3.11", "3.12", "3.13"]
+    uses: galactipy/test-template-workflow/.github/workflows/test_template.yml@master
+    with:
+      python-version: ${{ matrix.test-python-version }}
+      upload-coverage: false
+
+  test-and-coverage:
+    uses: galactipy/python-project-gh-workflow/.github/workflows/test_template.yml@master
+    with:
+      python-version: "3.9"
+      upload-coverage: true
