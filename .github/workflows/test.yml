@@ -17,7 +17,7 @@ jobs:
       upload-coverage: false
 
   test-and-coverage:
-    uses: galactipy/python-project-gh-workflow/.github/workflows/test_template.yml@master
+    uses: galactipy/test-template-workflow/.github/workflows/test_template.yml@master
     with:
       python-version: "3.9"
       upload-coverage: true
